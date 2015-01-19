@@ -1,0 +1,80 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>Choose Your Adventure!</title>
+            <meta charset="utf8">
+        </head>
+        <body>
+            This space is mad crazy blank
+            
+            <script>
+                var partyPlan = confirm("You gonna have a night out?");
+                    console.log(partyPlan);
+                if (!partyPlan) {
+                    var cribbage = confirm("Want to play cribbage?");
+                        console.log(cribbage);
+                            if (!cribbage) {
+                                var netflix = confirm("Want to hit the couch and watch netflix?");
+                                    console.log(netflix);
+                                        if (!netflix) {
+                                            console.log("Better head to bed");
+                                        } else {
+                                            console.log("Boot the dog off the couch, that's your spot!");
+                                        }
+                            } else {
+                                console.log("Break out the board!");
+                            }
+                } else {
+                    var activity = prompt("Of the D's, would you rather drink, dance or domino");
+                    activity = activity.toLowerCase();
+                        switch(activity) {
+                            case "drink":
+                                var drinkType = prompt("You want to drink beer, wine or liquor?");
+                                drinkType = drinkType.toLowerCase();
+                                switch(drinkType) {
+                                    case "beer":
+                                        console.log("Get comfy and grab a booth at the Redwood");
+                                        break;
+                                    case "wine":
+                                        console.log("Try to wear something nice and head to Bottlehouse");
+                                        break;
+                                    case "liquor":
+                                        console.log("Grab your bus pass, head to Georgetown, don't do anything stupid!");
+                                        break;
+                                    default:
+                                        console.log("Figure it out yourself");
+                                }
+                                    break;
+                            case "dance":
+                                var danceType = prompt("What is it gonna be? Metal, indie, or dance?");
+                                danceType = danceType.toLowerCase();
+                                switch(danceType) {
+                                    case "metal":
+                                        console.log("Practice some windmills and hit up El Corazon");
+                                        break;
+                                    case "indie":
+                                        console.log("Grab some flannel and nod your head at Neptune");
+                                        break;
+                                    case "dance":
+                                        console.log("Put on antiperspirent and drop it down at the War Room");
+                                        break;
+                                }
+                                    break;
+                            case "domino":
+                                console.log("Go throw some bones at the local cafe");
+                                    var people = prompt("How many of your friends showed up?");
+                                    people = Number(people);
+                                    if (people <= 0) {
+                                        console.log("Tonight, you play the guy with the eyepatch who lurks in the back");
+                                    } else if (people <= 2) {
+                                        console.log("Looks like you'll be diggin through the graveyard");
+                                    } else {
+                                        console.log("Gonna get wild yo");
+                                    }
+                                break;
+                        }
+                }
+            </script>
+            
+        </body>
+    </html>
