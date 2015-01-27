@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Assigment 3</title>
+        <meta charset="utf8">
+    </head>
+        <body>
+            <header>
+                Earthquake Analysis - A Comprehensive Review of How We're Kinda Screwed
+            </header>
+            <script src="script.js">
+                
+            </script>
+            <script>
+                
+                //largest earthquake
+                
+                var quakeLarge = 0;
+                var index = 0;
+                for (var i = 0; i < magnitude.length; i++) {
+                    var m = magnitude[i];
+                    if (m > quakeLarge) {
+                        quakeLarge = m;
+                        index = i;
+                    }
+                }
+                console.log("The Largest Size Earthquake:", quakeLarge);
+               
+                //average depth
+               
+                var totalDepth = 0;
+                for (var i = 0; i < depth.length; i++) {
+                    var item = depth[i];
+                    totalDepth = totalDepth + item;
+                }
+                
+                var averageDepth = totalDepth / depth.length;
+                console.log("Average Depth of All Quakes:", averageDepth);
+                
+                //quakes other than "earthquake"
+                
+                var notQuakes = 0;
+                for (var i = 0; i < type.length; i++) {
+                    var item = type[i];
+                    if (item != "earthquake") {
+                       notQuakes++; 
+                    }
+                }
+                console.log("Number of Quakes That Are Not Earthquakes:", notQuakes);
+               
+            </script>
+        </body>
+</html>
