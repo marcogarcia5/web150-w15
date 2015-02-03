@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Assigment 4</title>
+        <meta charset="utf8">
+    </head>
+        <body>
+            <header>
+                Top Companies
+            </header>
+            <script src="script.js">
+                
+            </script>
+            <script>
+            
+            //What is the smallest company?
+            
+                var smallest = companies[0];
+                
+                for (var i = 0; i < companies.length; i++) {
+                    var item = companies[i];
+                    if (smallest.employees > item.employees) {
+                        smallest = item;
+                    }
+                }
+                
+                console.log ("The company with the least amount of employees:", smallest.company, smallest.employees);
+                
+            //Which companies had a deficit in earning?
+            
+                var deficit = [];
+                
+                for (var i = 0; i < companies.length; i++) {
+                    var item = companies[i];
+                    if (companies[i].profitDelta < 0) {
+                        deficit.push(item.company);
+                    }
+                }
+                
+                console.log("These companies had a deficit in earning:", deficit);
+                
+            //What is the average market cap for companies in the manufacturing sector?
+                
+                var manu = []
+                
+                for (var i = 0; i < companies.length; i++) {
+                    var item = companies[i]
+                    if (companies[i].sector == "manufacturing") {
+                        manu.push(item.marketCap);
+                    }
+                }
+                
+                var total = 0;
+                
+                for (var i = 0; i < manu.length; i++) {
+                    var item = manu[i];
+                    total = total + item;
+                }
+                
+                var average = total / manu.length;
+                
+                console.log("The average market cap for companies in Manufacturing:", average);
+            
+                
+            </script>
+        </body>
+</html>
