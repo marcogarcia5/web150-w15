@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 7</title>
+        <style type="text/css">
+            
+        </style>
+    </head>
+    <body>
+        <button class="away">Run Away Fool!</button>
+        <button class="to">I'm Gonna Get Ya!</button>
+        
+        <canvas width=640 height=480></canvas>
+        
+    </body>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>
+        
+        var $canvas = $("canvas");
+        var canvas = $canvas.get(0);
+        var context = canvas.getContext("2d");
+        
+        var drawNeko = function(x, y) { //create rectangle
+            context.fillStyle = "seagreen";
+            context.fillRect(x - 5, y - 5, 10, 10); //x, y, width, height
+        };
+        
+        var cat = {  //creating a variable for the animate function
+            x: 100,
+            y: 100,
+            dx: 2, //defines horizontal motion and speed
+            dy: 2  //defines vertical motion and speed
+        };
+        
+        var pointer = {  //sets default for pointer for cat to follow
+            x: 0,
+            y: 0
+        };
+        
+        var update = function(animal) {
+            animal.x = animal.x + animal.dx;
+            animal.y = animal.y + animal.dy;            
+        };
+        
+        var wander = function(animal) {
+            animal.x = animal.x + animal.dx; //will allow you to redefine the motion based on the animal.dx variable
+            if (animal.x > canvas.width || animal.x < 0) { //when the cat hits the right side of screen, will bounce back to the left, vice versa
+                animal.dx = animal.dx * -1;
+            }
+            
+            animal.y = animal.y + animal.dy; //will allow you to redefine the motion based on the animal.dx variable
+            if (animal.y > canvas.height || animal.y < 0) { //when the cat hits the top of screen, will bounce back to the bottom, vice versa
+                animal.dy = animal.dy * -1;
+            }
+        };
+        
+        var counter = 0;
+        var chaseTail = function(animal) { //give cat a circular motion
+            counter = counter + .1; 
+            animal.dx = Math.sin(counter);
+            animal.dy = Math.cos(counter);
+        };
+        
+        var toButton = $(".to");
+        
+        var chasePointer = function(animal) {
+            if (pointer.x < animal.x) {
+                animal.dx = -2;
+            } else {
+                animal.dx = 2;
+            }
+            if (pointer.y < animal.y) {
+                animal.dy = -2;
+            } else {
+                animal.dy = 2;
+            }
+            if (Math.abs(animal.x - pointer.x) < 2) {
+            if (Math.abs(animal.y - pointer.y) < 2) {
+                behavior = sleep;
+            }
+            }
+        };
+        
+        var awayButton = $(".away");
+        
+        var runPointer = function(animal) {
+            if (pointer.x < animal.x) {
+                animal.dx = 2;
+            } else {
+                animal.dx = -2;
+            }
+            if (pointer.y < animal.y) {
+                animal.dy = 2;
+            } else {
+                animal.dy = -2;
+            }
+        };
+        
+        var sleep = function(animal) { //makes cat rest in one spot
+            animal.dx = 0;
+            animal.dy = 0;
+        };
+        
+        var behavior = chaseTail;        
+        
+        var animate = function() { //create animation function
+            context.clearRect(0, 0, canvas.width, canvas.height); //will clear canvas after every refresh, will not leave streak
+            //cat.x = cat.x + 1;  //moves cat to the right
+            //wander(cat); //calls wander function from variable above
+            //chaseTail(cat); //calls chaseTail function
+            update(cat);
+            behavior(cat);
+            drawNeko(cat.x, cat.y);
+            setTimeout(animate, 16); //16 mSeconds
+        };
+        
+        setTimeout(animate, 16); //activates function after time lapse, 16 mSeconds, write 1 * 1000 for seconds
+            //setTimeout = runs once
+            //setInterval = runs at interval
+            
+        $canvas.on("click", function() { //on click, changes 
+            behavior = wander;
+        });
+        
+        var convertToCanvas = function(x, y) {
+            var offset = $canvas.offset();
+            var newX = x - offset.left;
+            var newY = y - offset.top;
+            return {
+                x: newX,
+                y: newY
+            }
+        };
+        
+        $canvas.on("mousemove", function(e) { //needs an 'e' event to reference the location of the pointer (mouse)
+            var converted = convertToCanvas(e.pageX, e.pageY);
+            pointer.x = converted.x;
+            pointer.y = converted.y;
+            behavior = runPointer;
+        });
+        
+        //toButton.on("click", function() {
+            //behavior = chasePointer;
+        //});
+        
+        awayButton.on("click", function(e) {
+            behavior = runPointer;
+        });
+        //drawNeko(100, 100); //draw function (rectangle)
+        
+        
+        
+    </script>
+</html>
