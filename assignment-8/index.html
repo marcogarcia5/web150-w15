@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+            <title>Irregular Expression</title>
+            <meta charset="utf8">
+    </head>
+    <body>
+        <input class="vowels">
+            <p></p>
+        <input class="ending">
+        <input class="numbers">
+                <button class="submit">Submit</button>
+                
+        <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script>
+            
+            var vowels = $(".vowels");
+            vowels.on("change", function() {
+                var re = /^[^qwrtypsdfghjklzxcvbnm][aeiou]$/;
+                var $this = $(this);
+                var value = $this.val();
+                var valid = re.test(value);
+                
+                if (valid) {
+                    $this.css("outline", "");
+                } else {
+                    var p = $("p");
+                    var message = $("<h1></h1>");
+                    message.html("ERROR");
+                }
+                p.append(message);
+            });
+            
+            var ending = $(".ending");
+            ending.on("change", function() {
+                var re = /.+ing/;
+                var $this = $(this);
+                var value = $this.val();
+                var valid = re.test(value);
+                
+                if (valid) {
+                    $this.css("outline", "");
+                } else {
+                    $this.css("outline", "1px solid orange");
+                }
+            });
+            
+            var numbers = $(".numbers");
+            numbers.on("change", function() {
+               var re = /^[^a-zA-Z].+-.+,.+\..+$/;
+               var $this = $this.val();
+               var valid = re.test(value);
+               
+               if (valid) {
+                    $this.css("outline", "");
+               } else {
+                    $this.css("outline", "1px solid green");
+               }
+            });
+            
+        </script>
+    </body>
+</html>
