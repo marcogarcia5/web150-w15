@@ -47,15 +47,15 @@
             
             var numbers = $(".numbers");
             numbers.on("change", function() {
-               var re = /^[^a-zA-Z].+-.+,.+\..+$/;
-               var $this = $this.val();
-               var valid = re.test(value);
+                var re = /('\\d+')/;
+                var $this = $this.val();
+                var valid = re.test(value);
                
-               if (valid) {
+                if (valid) {
                     $this.css("outline", "");
-               } else {
+                } else {
                     $this.css("outline", "1px solid green");
-               }
+                }
             });
             
         </script>
