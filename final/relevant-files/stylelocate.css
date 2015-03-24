@@ -1,0 +1,1628 @@
+/*
+Theme Name: Dama
+Author: Hum Creative
+Author URI: http://humcreative.com
+*/
+
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 2948996, 2015-01-07T16:26:24-0500
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FF Absara Web Pro Light by FontFont
+ * URL: http://www.myfonts.com/fonts/fontfont/absara/pro-light/
+ * Copyright: 2012 Xavier Dupr&#x00E9; published by FSI FontShop International GmbH
+ * Licensed pageviews: 500,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2948996
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/************************************************************************************
+@FONT-FACE
+*************************************************************************************/
+
+@font-face {
+    font-family: 'FFAbsaraWebProLight';
+    src: url('http://damawashington.com/webfonts/2CFF84_0_0.eot');
+    src: url('http://damawashington.com/webfonts/2CFF84_0_0.eot?#iefix') format('embedded-opentype'),
+    url('http://damawashington.com/webfonts/2CFF84_0_0.woff') format('woff'),
+    url('http://damawashington.com/webfonts/2CFF84_0_0.woff2') format('woff2'),
+    url('http://damawashington.com/webfonts/2CFF84_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CalibreWeb-Semibold';
+    src: url('http://damawashington.com/webfonts/CalibreWeb-Semibold.eot');
+    src: url('http://damawashington.com/webfonts/CalibreWeb-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('http://damawashington.com/webfonts/CalibreWeb-Semibold.woff') format('woff'),
+    url('http://damawashington.com/webfonts/CalibreWeb-Semibold.woff2') format('woff2'),
+    url('http://damawashington.com/webfonts/CalibreWeb-Semibold.ttf') format('truetype');
+}
+
+
+.FFAbsaraWebProLight { font-family: FFAbsaraWebProLight; }
+.CalibreWeb-Semibold { font-family: CalibreWeb-Semibold; }
+
+
+/************************************************************************************
+HTML RESET
+*************************************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; font: inherit; vertical-align: baseline; -webkit-font-smoothing: antialiased !important;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, label, legend { display: block; }
+body { font-size:100%; line-height: 1; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-spacing: 0; }
+
+
+/************************************************************************************
+GLOBAL
+*************************************************************************************/
+body {
+    font-family: 'CalibreWeb-Semibold', sans-serif;
+
+}
+
+html {
+    background: url(http://damawashington.com/img/dama-main-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.small-caps {
+    font-variant: small-caps;
+    color: #fff;
+}
+
+#batch .small-caps {
+    font-variant: small-caps;
+    color: #000;
+}
+
+.dama-icon {
+	background: url(http://damawashington.com/img/dama-icon2.png);
+	background-size: 50px 60px;
+	width: 50px;
+	height: 60px;
+	display: block;
+	float: left;
+	margin-bottom: 20px;
+}
+
+
+.down-arrow-wrap {
+	display: block;
+	background-size: 40px 99px;
+	position: absolute;
+	bottom:150px;
+	right:100px;
+}
+
+.down-arrow {
+	display: block;
+	width:40px;
+	height:99px;
+	background:url(http://damawashington.com/img/dama-arrow2.png) no-repeat;
+	background-size: 40px 99px;
+	margin: 0 auto;
+}
+
+h3.scroll-down {
+	font-size: 14px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 0px;
+	color: #fff;
+}
+
+
+/************************************************************************************
+HEADER
+*************************************************************************************/
+header {
+     background: #000;
+     width: 100%;
+     height:75px;
+     z-index: 2000;
+     display: block;
+     float:left;
+     position: fixed;
+     bottom: 0;
+
+}
+
+.fixed {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+}
+
+.fadein {
+    -webkit-animation: fadein .75s; /* Chrome, Safari, Opera */
+            animation: fadein .75s;
+
+     -webkit-transition: all .75s;
+        -moz-transition: all .75s;
+             transition: all .75s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+      to {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes fadein {
+     from {opacity: 0;}
+       to {opacity: 1;}
+}
+
+
+#logo {
+    width: 120px;
+    height: 40px;
+    background: url(http://damawashington.com/img/dama-logo.png);
+    background-size: 120px 40px;
+    display: none;
+    float: left;
+    margin-left: 10px;
+}
+
+h1 {
+    display: none;
+}
+
+#main-menu ul{
+    text-align: center;
+    margin-top: 14px !important;
+    max-width: 736px;
+    margin: 0 auto;
+}
+
+#main-menu ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px 15px 0px 15px;
+}
+
+#main-menu ul li a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #8f9189;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all .75s;
+     transition: all .75s;
+     -moz-transition: all .75s;
+}
+
+#main-menu ul li a:hover{
+    color: #ffffff;
+    -webkit-transition: all .75s;
+     transition: all .75s;
+     -moz-transition: all .75s;
+}
+
+
+
+/*! responsive-nav.js 1.0.34 by @viljamis */
+#mobile-menu {
+    display: none;
+}
+
+.nav-collapse ul {
+  margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+    margin-top: 60px !important;
+    background: #c69c6d;
+    width: 100%;
+    height: 485px !important;
+}
+
+.nav-collapse li a{
+  color: #1e1e1e;
+  width: 100%;
+  display: block;
+  font-size: 26px;
+  font-weight:bold;
+  text-transform: uppercase;
+  padding:20px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  padding-top: 30px;
+  letter-spacing: 1px;
+  font-family: 'CalibreWeb-Semibold', sans-serif !important;
+}
+
+.nav-collapse li {
+  border-bottom: 1px solid #a5835e;
+  width: 87%;
+  margin: 0 auto;
+}
+
+
+
+#mobile-logo {
+    width: 120px;
+    height: 40px;
+    background: url(http://damawashington.com/img/dama-logo.png);
+    background-size: 120px 40px;
+    display: block;
+    float: left;
+    margin-left: 19px;
+    position: absolute;
+    top: 10px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
+/************************************************************************************
+FIREFOX SPECIFIC
+*************************************************************************************/
+@-moz-document url-prefix() {
+    .top-section {
+        min-height: 1000px;
+        height: 1000px;
+    }
+
+    #process h2 {
+        font-weight: normal !important;
+    }
+
+    .top-section .intro h2 {
+        font-weight: normal !important;
+    }
+
+    #products h2 {
+        font-weight: normal !important;
+    }
+    #products h3 {
+        font-weight: normal !important;
+    }
+    #retailers h2 {
+        font-weight: normal !important;
+    }
+
+    #batch h2 {
+         font-weight: normal !important;
+    }
+    .popup_txt {
+         font-weight: normal !important;
+    }
+    .nav-toggle {
+        font-weight: normal !important;
+    }
+
+    #sticker-nav ul li a {
+        font-weight: normal !important;
+    }
+    #contact h2 {
+        font-weight: normal !important;
+    }
+}
+
+
+
+/************************************************************************************
+BODY
+*************************************************************************************/
+#main-wrapper{
+    background:#1e1e1e;
+    width:100%;
+    height:100%;
+    display: block;
+}
+
+#site-wrapper {
+    display: block;
+    margin: 0 auto;
+    background: #1e1e1e;
+    color: #fff;
+    max-width:1800px;
+}
+.content {
+    margin-top: 100px;
+}
+
+.top-section {
+    min-height: 100vh;
+    display: block;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+
+.top-section img{
+  width: 100%;
+  height:auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.top-logo {
+    width: 230px;
+    height: 80px;
+    background: url(http://damawashington.com/img/dama_logo3.png);
+    background-size: 230px 80px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+
+.top-section .intro {
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.top-section .intro h2 {
+    color: #fff;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.top-section .intro p {
+    color: #fff;
+    font-size: 19px;
+    line-height: 30px;
+    font-family: 'FFAbsaraWebProLight', serif;
+    margin-top: 18px;
+}
+
+footer {
+    display: block;
+    width: 100%;
+}
+
+
+
+/************************************************************************************
+PROCESS
+*************************************************************************************/
+#process, #products, #batch, #contact, #retailers{
+    padding-top:100px;
+}
+
+#process h2 {
+    color: #c69c6d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom:40px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+#process p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'FFAbsaraWebProLight', serif !important;
+}
+
+#cloning { margin-top:-65px;}
+
+
+#sticker {
+      width: 386px;
+      height: 100px;
+      margin: 0 auto;
+      z-index: 100;
+      display: block;
+}
+
+#sticker-nav {
+    width: 120px;
+    z-index: 100;
+    right: 20px !important;
+    top:400;
+    position: fixed;
+    text-align: center;
+}
+
+#sticker-nav ul li{
+    list-style-type: none;
+}
+
+#sticker-nav ul li a{
+    font-size: 12px;
+    font-weight: bold;
+    color: #3c3c3c;
+    text-transform: uppercase;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+#sticker-nav ul li.selected a,
+#sticker-nav ul li a:hover{
+    color: #c69c6d;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+
+.number {
+    color: #c69c6d;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+    text-align: center;
+}
+
+.mobilenumber {
+    display: none;
+}
+
+.photo-wrap {
+    margin-top: -50px;
+    position:relative;
+    z-index:2;
+}
+
+.parallax {
+  position:relative;
+  z-index:1;
+  height:450px;
+}
+
+#trans1 {
+  background: url(http://damawashington.com/img/flower_paralax_1.jpg) no-repeat ;
+  display:block;
+  width:100%;
+  overflow: hidden;
+  display: block;
+  height: 500px !important;
+}
+
+
+
+/************************************************************************************
+PRODUCTS
+*************************************************************************************/
+
+#products {
+    padding-bottom: 200px;
+}
+#products h2 {
+    color: #c69c6d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+#products p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'FFAbsaraWebProLight', serif !important;
+    display: block;
+    float: left;
+    padding-right: 30px;
+}
+
+#products h2.history {
+    color: #c69c6d;
+    font-size: 31px;
+    line-height: 45px;
+    text-transform: none;
+    letter-spacing: 0px;
+    padding-right: 40px;
+}
+
+#products h3 {
+    color: #c69c6d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom:20px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.product-name {
+    float:left;
+    display: block;
+    width:75%;
+    border-bottom: 1px solid #7C7C7C;
+    margin-bottom:30px;
+}
+
+#products .product-name h2{
+    color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.oil-icon {
+    display: block;
+    float:left;
+    margin-right:20px;
+    width:80px;
+    height: 80px;
+    background: url(http://damawashington.com/img/products-oil.png) no-repeat;
+    background-size: 80px 80px;
+    margin-bottom:30px;
+}
+
+.flower-icon {
+    display: block;
+    float:left;
+    margin-right:20px;
+    width:80px;
+    height: 80px;
+    background: url(http://damawashington.com/img/products-flower.png) no-repeat;
+    background-size: 80px 80px;
+    margin-bottom:30px;
+}
+
+.vapor-icon {
+    display: block;
+    float:left;
+    margin-right:20px;
+    width:80px;
+    height: 80px;
+    background: url(http://damawashington.com/img/products-vapor.png) no-repeat;
+    background-size: 80px 80px;
+    margin-bottom:30px;
+}
+
+.wax-icon {
+    display: block;
+    float:left;
+    margin-right:20px;
+    width:80px;
+    height: 80px;
+    background: url(http://damawashington.com/img/products-wax.png) no-repeat;
+    background-size: 80px 80px;
+    margin-bottom:30px;
+}
+
+.capsule-icon {
+    display: block;
+    float:left;
+    margin-right:20px;
+    width:80px;
+    height: 80px;
+    background: url(http://damawashington.com/img/products-capsules.png) no-repeat;
+    background-size: 80px 80px;
+    margin-bottom:30px;
+}
+
+
+/************************************************************************************
+RETAILERS
+*************************************************************************************/
+#retailers {
+    background: #ffffff;
+    height:920px;
+    width:100%;
+    padding-top: 100px;
+}
+
+#retailers h2{
+    color: #c69c6d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+#retailers p {
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'FFAbsaraWebProLight', serif;
+    margin-bottom: 30px;
+
+}
+
+#retailers h3 {
+    color: #c69c6d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom:20px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.email {
+    text-align: center;
+    padding: 10px;
+    width: 43%;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+.email:hover {
+    color: #fff;
+    background: #c69c6d;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+/************************************************************************************
+BATCH
+*************************************************************************************/
+.batch-wrapper {
+    background: #c69c6d;
+    overflow: hidden;
+    display: block;
+    max-height: 615px;
+    width:100%;
+}
+
+.batch-wrapper .c6.first {
+    padding-right: 0px !important;
+}
+
+#batch {
+    background: #c69c6d;
+    padding: 100px;
+    overflow: hidden;
+    padding-bottom: 0px;
+}
+
+#batch h2 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom:40px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+#batch p {
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'FFAbsaraWebProLight', serif !important;
+}
+
+#batch .helper-text {
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.batch-wrapper  input {
+    width: 70%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding-left: 15px;
+    line-height: 24px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #c69c6d;
+    font-family: CalibreWeb-Semibold, sans-serif;
+    -webkit-transition: -webkit-transform 0.3s;
+     -webkit-transition: all .75s;
+        -moz-transition: all .75s;
+             transition: all .75s;
+}
+
+.batch-wrapper  input:focus{
+    outline: none;
+    border: 3px solid #000;
+    -webkit-transition: -webkit-transform 0.3s;
+     -webkit-transition: all .75s;
+        -moz-transition: all .75s;
+             transition: all .75s;
+
+}
+
+#go {
+    border: 2px solid #000;
+    text-align: center;
+    padding: 10px;
+    width:30%;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    border-radius: 2px;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    font-size: 14px;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+#go:hover {
+    border: 2px solid #000;
+    background: #c69c6d;
+    color: #000;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+#results {
+    margin-bottom: 100px;
+}
+
+#results .results{
+    background: #c69c6d;
+    display: block;
+    padding-bottom: 100px;
+    padding-left: 100px;
+}
+
+
+#batchPDF img{
+    display: block;
+    width:147px;
+    height:43px;
+    float:left;
+    background: url(http://damawashington.com/img/download-pdf.png) no-repeat;
+    text-align: left !important;
+    margin-top:20px !important;
+    margin-left: 10px;
+}
+
+.batchPDFTitle {
+    text-align: left; 
+    margin-top:20px !important;
+    font-weight: normal !important;
+    margin-left: 10px;
+    font-family: 'FFAbsaraWebProLight', serif;
+}
+
+#results {
+    display: none; 
+    position: relative;
+    width:100%;
+    text-align: center !important;
+}
+
+#results h4{
+    text-align: left;
+    margin-left: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.titleStrain, .titleType, .titleCBD, .titleTHC, .titleTotal{
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+#batchStrain, #batchType, #batchCBD, #batchTHC, #batchTotal{
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'FFAbsaraWebProLight', serif !important;
+    text-align: left;
+    font-weight: normal;
+}
+
+#retailers img {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+
+/************************************************************************************
+CONTACT
+*************************************************************************************/
+#contact {
+    padding-bottom: 200px;
+}
+
+#contact h2 {
+    color: #c69c6d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+#contact h3 {
+    color: #c69c6d;
+    font-size: 15px;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    font-weight:bold;
+}
+
+#contact p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'FFAbsaraWebProLight', serif !important;
+}
+
+#contact a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #1e1e1e;
+    font-family: 'FFAbsaraWebProLight', serif !important;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+#contact a:hover {
+    color: #fff;
+    border-bottom: 1px solid #999999;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+#contact .terms p{
+    font-size: 12px;
+    display: block;
+    float:left;
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+
+#contact .terms a.siteby{
+    color: #777777;
+}
+#contact .terms p.first{
+    margin-left: 0px !important;
+}
+
+#contact .terms a.siteby:hover{
+    color: #c69c6d;
+}
+
+#contact .terms a{
+    font-size: 12px;
+    padding-bottom: 1px;
+    display: block;
+    float:left;
+}
+
+#contact .social a{
+    margin-right:15px;
+    background-size: 30px 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: block;
+    float:left;
+    border-bottom: none !important;
+    margin-top: 0px;
+    opacity: 1;
+    -webkit-transition: all .75s;
+            transition: all .75s;
+       -moz-transition: all .75s;
+}
+
+
+#contact .social a:hover{
+    opacity: .5;
+    -webkit-transition: all .75s;
+            transition: all .75s;
+       -moz-transition: all .75s;    
+}
+
+.batchNotFound {
+    margin-top: 20px;
+    color: #000;
+    display: none;
+}
+
+a.facebook {
+    background: url(http://damawashington.com/img/dama_facebook.png);
+}
+
+a.twitter {
+    background: url(http://damawashington.com/img/dama_twitter.png);
+}
+
+a.instagram {
+    background: url(http://damawashington.com/img/dama_instagram.png);
+}
+
+.black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 25px;
+    padding-top:50px;
+    border: 16px solid #c69c6d;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'FFAbsaraWebProLight', serif;
+    margin-bottom: 30px;
+}
+
+.close-it {
+    float: right;
+    color: #000;
+    display: block;
+    background: #c69c6d;
+    width: 100px;
+    text-align: center;
+    padding-top: 0px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+/************************************************************************************
+AGE VERIFICATION
+*************************************************************************************/
+.popup{
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0px;
+    right:0px;
+    top: 0px;
+    bottom:0px;
+    background-color:rgba(3, 3, 3, 0.99);
+    z-index: 9999;
+}
+ 
+.popupWindow{
+    background-color:white;
+    margin:0px auto;
+    width:40%;
+    min-width:400px;
+    min-height:225px;
+    margin-top:12%;
+    text-align: center;
+}
+ 
+.popup_txt{
+    font-size:26px;
+    font-weight:bold;
+    margin:10px;
+    padding-top:60px;
+    color:#c69c6d;
+}
+.popupWindow li{
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+.popup_img{
+    margin:10px;
+}
+ 
+.popup_img_yes,.popup_img_no{
+    margin:20px;
+}
+
+.popup .btn {
+    background: #c7c7c7;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    -webkit-transition: all .75s;
+        -moz-transition: all .75s;
+             transition: all .75s;
+}
+
+.popup .btn:hover {
+    background: #c69c6d;
+    -webkit-transition: all .75s;
+        -moz-transition: all .75s;
+             transition: all .75s;
+    
+}
+
+/************************************************************************************
+CLEAR FIX
+*************************************************************************************/
+.row:before,.row:after,.clearfix:before,.clearfix:after{content:'';display:table}
+.row:after,.clearfix:after{clear:both}
+.row,.clearfix{zoom:1}
+
+/************************************************************************************
+GRID LAYOUT
+*************************************************************************************/
+*{box-sizing:border-box; -ms-box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+body{margin:0 auto;}
+.grid{margin:0 auto; max-width:1000px; width:100%;}
+.row{width:100%; margin:0 auto;}
+.c1{width:8.33%;}
+.c2{width:16.66%;}
+.c3{width:25%;}
+.c4{width:33.33%;}
+.c5{width:41.66%;}
+.c6{width:50%;}
+.c7{width:58.33%;}
+.c8{width:66.66%;}
+.c9{width:75%;}
+.c10{width:83.33%;}
+.c11{width:91.66%;}
+.c12{width:100%; min-height:1px; float:left; position:relative;}
+.c1-5{width:20%;}/* This column can be used as a one fifth of the row */
+.c1-8{width:12.5%;}/* This column can be used as a one eigth of the row */ 
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c1-5,.c1-8 {min-height:1px; float:left; padding-left:10px; padding-right:10px; position:relative;}
+.c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+    padding-left: 0; position:relative;
+}
+.c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+    padding-right: 0; position:relative;
+}
+
+/************************************************************************************
+ALIGNMENTS
+*************************************************************************************/
+.centered{float: none; margin: auto;}
+.left {float: left;}
+.right {float: right;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+.space-top {margin-top: 100px;}
+.space-bot {margin-bottom: 100px;}
+.space-htop {margin-top: 10px;}
+.space-hbot {margin-bottom: 10px;}
+.center { text-align: center;}
+.divider { border: 1px solid #fff; margin-top: 20px; margin-bottom: 20px; opacity: .4;}
+.move-up {margin-top: -120px; }
+.move-down { margin-top:18%; }
+.top {z-index: 1 !important; display: block; position: relative;}
+.negative-top { padding-top: -85px;}
+.negative-top2 { margin-top: -25px !important;}
+.negative-margin-top {margin-top: -350px !important;}
+.bottom {z-index: 0 !important; display: block; position: relative;}
+.space20 { margin-bottom: 20px; }
+.space40 { margin-bottom: 40px; }
+.opacity {opacity: .9;}
+.lowercase { text-transform: lowercase !important; }
+.hidden{
+     opacity:0;
+     -webkit-transition: all .75s;
+     transition: all .75s;
+     -moz-transition: all .75s; 
+     -webkit-transform: translateY(50%);
+                -moz-transform: translateY(50%);
+                transform: translateY(50%);          
+}
+
+.visible {
+     opacity:1;
+     -webkit-transition: all .75s;
+     transition: all .75s;
+     -moz-transition: all .75s;
+     -webkit-transform: translateY(0%);
+                -moz-transform: translateY(0%);
+                transform: translateY(0%);          
+}
+
+.hidden-nt {
+     opacity:0 !important;
+     -webkit-transition: all .75s;
+     transition: all .75s;
+     -moz-transition: all .75s;
+}
+
+/************************************************************************************
+SCROLLING
+*************************************************************************************/
+
+#main-wrapper .row {
+     opacity: 0;
+     -webkit-transition: opacity .4s;
+     transition: opacity .4s;
+     -moz-transition: opacity .4s;     
+}
+
+#main-wrapper .row.visible {
+    opacity: 1;
+     -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;     
+}
+
+#sticker,#sticker-nav {
+    opacity: 1;
+     -webkit-transition: opacity .75s;
+     transition: opacity .75s;
+     -moz-transition: opacity .75s;
+}
+
+::selection {
+background: #FCD7AD !important;
+color: #fff;
+}
+
+::selection {
+background: #FCD7AD;
+color: #fff;
+text-shadow: none;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 { 
+    font-weight: none; 
+    font-style: normal; 
+    text-rendering: optimizeLegibility; 
+    line-height: 1.1; 
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 80%; color: #333333; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; text-decoration:none; }
+h1 {font-size: 36px; line-height: 48px;}
+h3 {font-size: 28px; line-height: 36px;}
+h4 {font-size: 24px; line-height: 32px;}
+h5 {font-size: 21px; line-height: 27px;}
+h6 {font-size: 18px; line-height: 27px;}
+
+a {color: #c69c6d; text-decoration: none; line-height: inherit; }
+a:hover {color: #333333; }
+a:focus {
+	color: #33333;
+	outline: none;
+}
+
+p {margin-bottom: 10px; padding:0; line-height: 28px; }
+p span {color: #46aae3; }
+p a, p a:visited {line-height: inherit; }
+
+blockquote, blockquote p{color: #6F6F6F; font-size: 14px; line-height: 24px; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;}
+blockquote{border-left: 1px solid #DDDDDD; padding: 0 10px; margin-bottom: 10px;}
+blockquote cite{color: #555555; display: block; font-size: 12px;}
+blockquote cite:before{content: "- ";}
+
+sub, sup {font-size: 60%; line-height: 0; position: relative; vertical-align: baseline;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+i { font-style: italic; line-height: inherit; }
+strong, b { font-weight: bold; line-height: inherit; }
+small { font-size: 70%; line-height: inherit; }
+
+hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 20px 0 20px; height: 0; }
+
+/* ---- Lists ---- */
+ul, ol, dl { 
+    font: normal 14px/24px "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+    margin-bottom: 8px; 
+    list-style-position: inside; 
+    text-indent: 5px; 
+    color: #333333; 
+}
+ul li ul, ul li ol { margin-left: 15px; margin-bottom: 0; }
+ul.square {list-style-type: square;}
+ul.circle {list-style-type: circle;}
+ul.disc {list-style-type: disc;}
+ul.no-bullet { list-style: none; }
+ul.square li ul, ul.circle li ul, ul.disc li ul, ul.no-bullet li ul {margin-left: 15px; }
+ol li ul, ol li ol { margin-left: 20px; margin-bottom: 0; }
+dl dt{font-size:16px; line-height: 24px;}
+dl dd{margin-left: 15px;}
+
+
+
+
+/************************************************************************************
+MEDIA QUERY - 1200PX
+*************************************************************************************/
+@media only screen and (max-width:1200px){
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12,.row .row .c1-5,.row .row .c1-8{width:100%;margin-bottom:20px;margin-left:0px;margin-right:0px; }
+    .row .row > div:last-child{margin-bottom:0 !important}
+
+    #batch {
+        background: #c69c6d;
+        padding: 50px;
+        overflow: hidden;
+        padding-bottom: 0px;
+    }
+
+    #sticker-nav {
+        display: none;
+    }
+}
+
+/************************************************************************************
+MEDIA QUERY - 960PX
+*************************************************************************************/
+@media only screen and (max-width:1024px){
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12,.row .row .c1-5,.row .row .c1-8{width:100%;margin-bottom:20px;margin-left:0px;margin-right:0px; }
+    .row .row > div:last-child{margin-bottom:0 !important}
+
+    .mobilenumber {
+        color: #c69c6d;
+        font-weight: bold;
+        font-size: 12px;
+        margin-top: 0px;
+        display: block;
+        float: left;
+        margin-right: 15px;
+    }
+
+    .number {
+        display: none;
+    }
+
+    .hidden{
+         opacity:0;
+         -webkit-transition: all .75s;
+         transition: all .75s;
+         -moz-transition: all .75s; 
+         -webkit-transform: translateY(0%);
+                -moz-transform: translateY(0%);
+                transform: translateY(0%);          
+    }
+
+    .visible{
+         opacity:1;
+         -webkit-transition: all .75s;
+         transition: all .75s;
+         -moz-transition: all .75s;
+         -webkit-transform: translateY(0%);
+                -moz-transform: translateY(0%);
+                transform: translateY(0%);          
+    }
+
+    .move-up {
+        margin-top: 0px;
+    }
+
+
+    header {
+        display: none;
+    }
+
+    #mobile-menu {
+        background: #000000;
+        position: fixed; 
+        height: 60px;
+        width:100%;
+        display: block;
+        z-index:9999;
+    }
+   
+    .nav-toggle {
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 9999;
+    }
+
+
+    .js .nav-collapse {
+      clip: rect(0 0 0 0);
+      max-height: 0;
+      position: absolute;
+      display: block;
+      overflow: hidden;
+      zoom: 1;
+    }
+
+    .nav-collapse.opened {
+      max-height: 9999px !important;
+    }
+
+    #trans1 {
+      background: none;
+      display:block;
+      width:100%;
+      overflow: hidden;
+      display: block;
+      height: 330px !important;
+    }
+
+    .space-top {
+        margin-top: 20px;
+    }
+    .space-bot {
+        margin-bottom: 20px;
+    }
+
+    .move-down {
+        margin-top: 5%;
+    }
+
+    #sticker {
+        display: none;
+    }
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,.c1-5,.c1-8{padding:0 20px;}
+    .c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+        padding-left: 20px; position:relative;
+    }
+    .c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+        padding-right: 20px; position:relative;
+    }
+
+}
+/************************************************************************************
+MEDIA QUERY - 768PX
+*************************************************************************************/
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
+    body{font-size:90%}
+    .row{margin-bottom:0!important}
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,.c1-5,.c1-8{width:100%;margin-right:0;margin-left:0;margin-bottom:20px; padding:0 20px;}
+    .c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+        padding-left: 20px; position:relative;
+    }
+    .c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+        padding-right: 20px; position:relative;
+    }
+
+    #trans1 {
+        display: none;
+    }
+
+    #contact .terms a {
+        font-size: 10px;
+        margin-right: 10px;
+        line-height: 10px !important;
+    }
+
+    #contact .terms p {
+        font-size: 10px;
+        margin-left: 0px;
+        margin-right: 10px;
+        line-height: 10px !important;
+    }
+
+    #contact .social a {
+        font-size: 12px;
+    }
+
+    #retailers {
+        height: 800px;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .none {
+        display: none;
+    }
+
+    .center {
+        text-align: left;
+    }
+
+    #products h2.history {
+        font-size: 26px;
+        line-height: 33px;
+        padding-right: 0px;
+    }
+
+    .product-name {
+        width:62%;
+    }
+
+    #batch {
+        padding: 10px;
+        padding-top: 40px;
+    }
+
+    .top-section .intro h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .top-logo {
+        display: none;
+    }
+
+    .top-section {
+        max-height: 500px;
+        min-height: 500px;
+        background: url(http://damawashington.com/img/mobile-bg.jpg);
+    }
+
+    .top-section .intro{
+        padding-top: 20%;
+    }
+
+    .negative-margin-top {
+        margin-top: 0px !important;
+    }
+    .sticky-wrapper {
+        display: none;
+    }
+
+    #cloning {
+       margin-top: 10px; 
+    }
+
+    #results .results{
+        padding-left: 0px;
+        padding-top: 40px;
+    }
+
+    .space40 {
+        margin-bottom:0px;
+    }
+
+    #products p {
+        padding-right: 0px;
+    }
+
+    .popupWindow {
+        background-color: white;
+        margin: 0 auto;
+        width:300px !important;
+        max-width: 300px !important;
+        min-height: 225px;
+        margin-top: 12%;
+        text-align: center;
+        min-width:300px !important;
+    }
+
+    .email {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        background: #000;
+        color: #fff;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 14px;
+        display: block;
+        float:left;
+        margin: none;
+        -webkit-transition: all .25s;
+        transition: all .25s;
+        -moz-transition: all .25s;
+    }
+
+    .white_content {
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+        padding: 25px;
+        padding-top:50px;
+        border: 16px solid #c69c6d;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+        color: #000;
+        font-size: 18px;
+        line-height: 28px;
+        font-family: 'FFAbsaraWebProLight', serif;
+        margin-bottom: 30px;
+    }
+    
+    .down-arrow-wrap {
+		display: none;
+	}
+}
